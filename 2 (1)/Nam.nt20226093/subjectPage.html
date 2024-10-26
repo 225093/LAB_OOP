@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nguyen Tri Nam</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="header w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a
+          id="openNav"
+          class="w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+          href="javascript:void(0)"
+          onclick="w3_open()"
+          ><i class="fa fa-bars"></i>
+        </a>
+        <a
+          href="/index.html"
+          class="logo w3-button w3-theme-l1"
+          data-page="mainPage"
+        >
+          <div class="logo-img">
+            <img src="./images/logo.png" alt="" />
+          </div>
+        </a>
+        <a
+          href="#"
+          class="navbar-item w3-button w3-hover-white"
+          >Thông tin môn học</a
+        >
+        <a
+          href="/techstackPage.html"
+          class="navbar-item w3-button w3-hover-white"
+          >Các công nghệ Web</a
+        >
+
+        <a
+          href="studentInfoPage.html"
+          class="navbar-item w3-button w3-hover-white"
+          >Thông tin sinh viên</a
+        >
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="content-to-change"></div>
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main">
+      <div class="w3-row">
+        <div class="w3-container">
+          <h2 class="w3-text-teal text-center">THÔNG TIN CÁC MÔN HỌC</h2>
+          <div class="subject-info">
+            <div class="subject-info-top">
+              <div class="subject-info-top-item">
+                <label for="subject-search">Tìm theo viện:</label>
+                <input
+                  type="text"
+                  id="subject-search"
+                  name="subject-search"
+                  placeholder="Nhập tên viện"
+                />
+              </div>
+              <div class="subject-info-top-item">
+                <label for="subject-search">Mã HP:</label>
+                <input
+                  type="text"
+                  id="subject-search"
+                  name="subject-search"
+                  value="IT4409"
+                  placeholder="Nhập mã học phần"
+                />
+              </div>
+              <div class="subject-info-top-item">
+                <label for="subject-search">Tên HP:</label>
+                <input
+                  type="text"
+                  id="subject-search"
+                  name="subject-search"
+                  placeholder="Nhập tên học phần"
+                />
+              </div>
+              <div class="subject-info-top-item">
+                <button>Tìm kiếm</button>
+              </div>
+            </div>
+            <div class="subject-info-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Mã học phần</th>
+                    <th>Tên học phần</th>
+                    <th>Thời lượng</th>
+                    <th>Số tín chỉ</th>
+                    <th>TC học phí</th>
+                    <th>Viện quản lý</th>
+                    <th>HP điều kiện</th>
+                    <th>Tên tiếng Anh</th>
+                    <th>Trọng số</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>IT4409</td>
+                    <td>Công nghệ Web và dịch vụ trực tuyến</td>
+                    <td>3(2-2-0-6)</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>TCNTT</td>
+                    <td>(IT3090/IT3091/IT3292), (IT3100/IT3600/IT3103)</td>
+                    <td>Web technologies and e- Services</td>
+                    <td>0.6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="subject-info-desc">
+              <div class="subject-desc-block">
+                <label for="">Mục tiêu</label>
+                <p>
+                  Học phần giới thiệu tổng quan công nghệ phát triển các ứng
+                  dụng trên nền web. Kết thúc học phần sinh viên có khả năng tự
+                  lựa chọn một ngôn ngữ lập trình như JSP, ASP, PHP để phát
+                  triển ứng dụng web 3 lớp. Sinh viên cũng được làm quen với các
+                  công nghệ hiện đang thịnh hành trên nền Web như XML, Web
+                  Service, RSS, ... Để giúp sinh viên có định hướng trong phát
+                  triển ứng dụng web, các mô hình ứng dụng như CMS, Portal,
+                  eCommerce, eLearning được giới thiệu trong nội dung học phần.
+                </p>
+              </div>
+              <div class="subject-desc-block">
+                <label for="">Nội dung</label>
+                <p>
+                  Kiến trúc ứng dụng web; Các công nghệ lập trình web JSP, ASP,
+                  PHP, XML, Web Service, RSS, ...; Xây dựng hệ thống CMS; Xây
+                  dựng cổng thông tin (portal); Xây dựng các hệ thống thông tin
+                  điện tử (eCommerce, eLearning, eGoverment, ... ).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-padding-32 footer-container">
+          <div class="footer-img footer-block">
+            <img src="../images/footer-img.png" alt="" />
+          </div>
+          <div class="footer-block">
+            <a>Bản quyền thuộc về Đại học Bách khoa Hà Nội</a>
+            <a>Địa chỉ: Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</a>
+            <a>Điện thoại: 024 3869 4242</a>
+          </div>
+          <div class="footer-block">
+            <a href="#" onclick="loadPage('subjectPage')"
+              >Thông tin các môn học</a
+            >
+            <a href="#" onclick="loadPage('techstackPage')"
+              >Các công nghệ website</a
+            >
+            <a href="#" onclick="loadPage('studentInfoPage')"
+              >Thông tin sinh viên</a
+            >
+          </div>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>
+            Powered by
+            <a
+              href="https://www.w3schools.com/w3css/default.asp"
+              target="_blank"
+              >Nguyen Tri Nam</a
+            >
+          </p>
+        </div>
+      </footer>
+      <!-- END MAIN -->
+    </div>
+
+    <script>
+      const addEventScrollToSidebar = () => {
+        document.querySelectorAll(".w3-sidebar a").forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              const offsetPosition =
+                targetElement.getBoundingClientRect().top + window.scrollY - 73;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      };
+
+      const setupSidebarToggle = () => {
+        const openNavBtn = document.getElementById("openNav");
+        const overlay = document.getElementById("myOverlay");
+
+        if (openNavBtn) {
+          openNavBtn.addEventListener("click", () => {
+            w3_open();
+          });
+        }
+
+        if (overlay) {
+          overlay.addEventListener("click", () => {
+            w3_close();
+          });
+        }
+      };
+
+      const w3_open = () => {
+        const mySidebar = document.getElementById("mySidebar");
+        const overlayBg = document.getElementById("myOverlay");
+
+        if (mySidebar && overlayBg) {
+          mySidebar.style.display = "block";
+          overlayBg.style.display = "block";
+        }
+      };
+
+      const w3_close = () => {
+        const mySidebar = document.getElementById("mySidebar");
+        const overlayBg = document.getElementById("myOverlay");
+
+        if (mySidebar && overlayBg) {
+          mySidebar.style.display = "none";
+          overlayBg.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

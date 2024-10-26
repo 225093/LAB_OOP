@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nguyen Tri Nam</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="header w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+
+        <a
+          id="openNav"
+          class="w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+          href="javascript:void(0)"
+          onclick="w3_open()"
+          ><i class="fa fa-bars"></i>
+        </a>
+
+        <a href="#" class="logo w3-button w3-theme-l1" data-page="mainPage">
+          <div class="logo-img">
+            <img src="./images/logo.png" alt="" />
+          </div>
+        </a>
+        <a href="/subjectPage.html" class="navbar-item w3-button w3-hover-white"
+          >Thông tin môn học</a
+        >
+        <a
+          href="/techstackPage.html"
+          class="navbar-item w3-button w3-hover-white"
+          >Các công nghệ Web</a
+        >
+
+        <a
+          href="studentInfoPage.html"
+          class="navbar-item w3-button w3-hover-white"
+          >Thông tin sinh viên</a
+        >
+      </div>
+    </div>
+
+    <nav
+      class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large"
+        title="Close Menu"
+      >
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Menu</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#thongtinkhaigiang"
+        >Thông tin khai giảng</a
+      >
+      <a class="w3-bar-item w3-button w3-hover-black" href="#thongtinsemina"
+        >Thông tin các Semina</a
+      >
+      <a class="w3-bar-item w3-button w3-hover-black" href="#thongtinquantam"
+        >Thông tin được quan tâm</a
+      >
+    </nav>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="w3-row">
+        <div class="w3-container">
+          <h2 class="w3-text-teal text-center">TRANG CHỦ</h2>
+          <p>
+            Với cam kết trách nhiệm xã hội cao nhất, ĐHBK Hà Nội kiên định con
+            đường đổi mới để phát triển thành một đại học nghiên cứu hàng đầu
+            Châu Á, hình mẫu thành công, phát triển bền vững của một đại học tự
+            chủ toàn diện, có những đóng góp quan trọng trong phát triển kinh
+            tế-xã hội và bảo đảm quốc phòng, an ninh cho vùng đồng bằng Sông
+            Hồng, cho đất nước. ĐHBK Hà
+          </p>
+          <p>
+            Nội đã, đang và luôn là “ngôi nhà thân yêu” của mọi “Người Bách
+            khoa”, đoàn kết, tận tâm, tận lực làm việc và sáng tạo để đổi mới,
+            đột phá, tỏa sáng và thành công.
+          </p>
+        </div>
+      </div>
+      <div class="w3-row" id="thongtinkhaigiang">
+        <div class="w3-twothird w3-container">
+          <h3 class="w3-text-teal">Thông tin khai giảng</h3>
+          <p>
+            Lễ khai giảng năm học 2023-2024 là lễ khai giảng đầu tiên kể từ khi
+            Trường Đại học Bách khoa Hà Nội được đổi tên thành Đại học Bách khoa
+            Hà Nội (12/2022), là sự kiện quan trọng, mở ra cơ hội để Bách khoa
+            Hà Nội phát triển đột phá lên tầm cao mới, trở thành đại học nghiên
+            cứu, đổi mới sáng tạo, tự chủ toàn diện, có môi trường học thuật
+            sáng tạo, cởi mở, tự do học thuật, khơi dậy khát vọng cống hiến của
+            cán bộ viên chức, người lao động, sinh viên và học viên toàn đại
+            học, phát huy giá trị văn hoá, bản sắc của con người Bách khoa Hà
+            Nội.
+          </p>
+        </div>
+        <div class="w3-third w3-container">
+          <a
+            class="w3-center img-qc"
+            href="https://hust.edu.vn/vi/news/tin-tuc-su-kien/le-khai-giang-khoi-dau-su-chuyen-minh-thinh-vuong-va-phat-trien-cua-dai-hoc-bach-khoa-ha-noi-654856.html"
+          >
+            <img src="../images/khaigiang.jpg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="w3-row" id="thongtinsemina">
+        <div class="w3-twothird w3-container">
+          <h3 class="w3-text-teal">Thông tin các semina</h3>
+          <p>
+            Theo kế hoạch hàng tháng của Trường Công nghệ Thông tin và Truyền
+            thông, Đại học Bách khoa Hà Nội, Nhà trường tổ chức seminar khoa học
+            tháng 2 năm 2024 vào ngày 27/02. Buổi seminar có sự tham dự của hơn
+            40 giảng viên, nghiên cứu sinh, học viên cao học trực tiếp tại
+            Trường cùng nhiều người tham dự online qua Zoom. Bên cạnh đó, buổi
+            seminar cũng được phát livestream trực tuyến trên Fanpage cùa Trường
+            Công nghệ Thông tin và Truyền thông.
+          </p>
+        </div>
+        <div class="w3-third w3-container">
+          <a
+            class="w3-center img-qc"
+            href="https://soict.hust.edu.vn/seminar-khoa-hoc-truong-cntttt-thang-2-nam-2024.html"
+          >
+            <img src="../images/semina.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="w3-row" id="thongtinquantam">
+        <div class="w3-twothird w3-container">
+          <h3 class="w3-text-teal">Thông tin đang được quan tâm</h3>
+          <p>
+            Trong khuôn khổ chuỗi sự kiện Triển lãm Giáo dục Đại học Hoa Kỳ
+            2024, Đại sứ quán Hoa Kỳ tại Việt Nam phối hợp với Đại học Bách khoa
+            Hà Nội tổ chức Triển lãm các chương trình sau đại học khối ngành
+            STEM. Triển lãm có sự tham gia và giới thiệu đến từ 10 trường đại
+            học Hoa Kỳ về các chương trình đào tạo sau đại học và học bổng tới
+            sinh viên Việt Nam.
+          </p>
+        </div>
+        <div class="w3-third w3-container">
+          <a
+            class="w3-center img-qc"
+            href="https://hust.edu.vn/vi/su-kien-noi-bat/thong-bao-chung/trien-lam-giao-duc-hoa-ky-bac-sau-dai-hoc-khoi-nganh-stem-654720.html"
+          >
+            <img src="../images/ttquantam.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="pagination">
+          <a class="w3-button w3-black" href="#">1</a>
+          <a class="w3-button w3-hover-black" href="#">2</a>
+          <a class="w3-button w3-hover-black" href="#">3</a>
+          <a class="w3-button w3-hover-black" href="#">4</a>
+          <a class="w3-button w3-hover-black" href="#">5</a>
+          <a class="w3-button w3-hover-black" href="#">»</a>
+        </div>
+      </div>
+      <footer id="myFooter">
+        <div class="w3-container w3-padding-32 footer-container">
+          <div class="footer-img footer-block">
+            <img src="../images/footer-img.png" alt="" />
+          </div>
+          <div class="footer-block-container">
+            <div class="footer-block">
+              <a>Bản quyền thuộc về Đại học Bách khoa Hà Nội</a>
+              <a>Địa chỉ: Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</a>
+              <a>Điện thoại: 024 3869 4242</a>
+            </div>
+            <div class="footer-block">
+              <a href="#" onclick="loadPage('subjectPage')"
+                >Thông tin các môn học</a
+              >
+              <a href="#" onclick="loadPage('techstackPage')"
+                >Các công nghệ website</a
+              >
+              <a href="#" onclick="loadPage('studentInfoPage')"
+                >Thông tin sinh viên</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="w3-container w3-theme-l1">
+          <p>
+            Powered by
+            <a
+              href="https://www.w3schools.com/w3css/default.asp"
+              target="_blank"
+              >Nguyen Tri Nam</a
+            >
+          </p>
+        </div>
+      </footer>
+      <!-- END MAIN -->
+    </div>
+
+    <script>
+      const addEventScrollToSidebar = () => {
+        document.querySelectorAll(".w3-sidebar a").forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              const offsetPosition =
+                targetElement.getBoundingClientRect().top + window.scrollY - 73;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      };
+      addEventScrollToSidebar();
+      const setupSidebarToggle = () => {
+        const openNavBtn = document.getElementById("openNav");
+        const overlay = document.getElementById("myOverlay");
+
+        if (openNavBtn) {
+          openNavBtn.addEventListener("click", () => {
+            w3_open();
+          });
+        }
+
+        if (overlay) {
+          overlay.addEventListener("click", () => {
+            w3_close();
+          });
+        }
+      };
+
+      const w3_open = () => {
+        const mySidebar = document.getElementById("mySidebar");
+        const overlayBg = document.getElementById("myOverlay");
+
+        if (mySidebar && overlayBg) {
+          mySidebar.style.display = "block";
+          overlayBg.style.display = "block";
+        }
+      };
+
+      const w3_close = () => {
+        const mySidebar = document.getElementById("mySidebar");
+        const overlayBg = document.getElementById("myOverlay");
+
+        if (mySidebar && overlayBg) {
+          mySidebar.style.display = "none";
+          overlayBg.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
