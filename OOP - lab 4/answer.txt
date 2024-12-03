@@ -1,0 +1,36 @@
+Question 1: Which classes are aggregates of other classes?
+Lớp Cart là tập hợp các đối tượng thuộc lớp Media, bao gồm DVD, CD, Book, và các loại Media khác.
+Cart lưu giữ một danh sách các đối tượng Media, nhưng những đối tượng này không phụ thuộc vào Cart để tồn tại.
+
+Lớp Store cũng là tập hợp các đối tượng Media, với khả năng thêm hoặc xóa các đối tượng như DVD, CD, Book.
+Tương tự Cart, Store quản lý các đối tượng Media mà không ảnh hưởng đến sự tồn tại độc lập của chúng.
+
+Question 2: If the passing object is not an instance of Media, what happens?
+Khi đối tượng truyền vào không thuộc lớp Media, phương thức equals() sẽ trả về false.
+Nguyên nhân là đoạn mã kiểm tra kiểu của đối tượng (getClass() != obj.getClass()).
+Nếu kiểu không khớp với Media hoặc lớp con của nó, phương thức sẽ ngừng so sánh và trả về false.
+
+Question 3: Polymorphism: Observe what happens and explain in detail.
+Trong ví dụ này, đa hình (polymorphism) được thể hiện qua phương thức toString().
+Mặc dù các đối tượng đều được lưu trong danh sách kiểu ArrayList<Media>, nhưng khi gọi toString(), từng đối tượng sẽ sử dụng phiên bản toString() của lớp mình.
+Điều này xảy ra nhờ việc ghi đè phương thức toString() trong mỗi lớp con, cho phép hiển thị nội dung riêng biệt dựa trên kiểu thực tế của đối tượng. Đây là một ví dụ về đa hình tại thời điểm chạy (runtime polymorphism).
+
+Question 4: What class should implement the Comparable interface?
+Lớp Media nên triển khai giao diện Comparable, vì nó là lớp cha của các loại Media khác như Book, DVD, và CD.
+Việc này cho phép xác định một quy tắc sắp xếp mặc định áp dụng chung cho tất cả các loại Media.
+
+Question 5: In those classes, how should you implement the compareTo() method to reflect the ordering that we want?
+Để phản ánh thứ tự sắp xếp mong muốn, phương thức compareTo() cần được triển khai như sau:
+
+So sánh theo tiêu đề (title) trước, sử dụng String.compareTo() để sắp xếp theo thứ tự chữ cái.
+Nếu tiêu đề giống nhau, tiếp tục so sánh giá (cost) bằng Float.compare().
+Question 6: Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+Không, giao diện Comparable chỉ cho phép định nghĩa một quy tắc sắp xếp mặc định thông qua compareTo().
+Để có nhiều quy tắc sắp xếp (ví dụ: theo tiêu đề rồi giá, hoặc giá rồi tiêu đề), cần sử dụng giao diện Comparator.
+
+Question 7: Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+Ta cần ghi đè phương thức compareTo() trong lớp DVD để thực hiện quy tắc sắp xếp riêng:
+
+So sánh tiêu đề (title) trước, dùng String.compareTo().
+Nếu tiêu đề giống nhau, so sánh độ dài (length) theo thứ tự giảm dần.
+Nếu độ dài cũng giống nhau, tiếp tục so sánh giá (cost).
